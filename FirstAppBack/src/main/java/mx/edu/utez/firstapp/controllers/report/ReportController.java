@@ -2,9 +2,6 @@ package mx.edu.utez.firstapp.controllers.report;
 
 import mx.edu.utez.firstapp.models.category.CategoryRepository;
 import mx.edu.utez.firstapp.services.report.ReportService;
-import net.sf.jasperreports.engine.JRException;
-import net.sf.jasperreports.engine.JasperExportManager;
-import net.sf.jasperreports.engine.JasperPrint;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
@@ -14,13 +11,13 @@ import java.io.OutputStream;
 import java.sql.SQLException;
 
 @RestController
-@RequestMapping("/api-market/report")
+@RequestMapping("/api-market/report") // http://localhost:8080/api-market/report
 public class ReportController {
     @Autowired
     private CategoryRepository repository;
     @Autowired
     private ReportService service;
-    @GetMapping("/{id}")
+    /*@GetMapping("/{id}")
     @ResponseBody
     public void generateReport(HttpServletResponse response, @PathVariable long id) throws JRException, IOException, SQLException {
         JasperPrint jasperPrint = service.exportReport(id);
@@ -30,5 +27,5 @@ public class ReportController {
         OutputStream outputStream = response.getOutputStream();
         JasperExportManager.exportReportToPdfStream(jasperPrint, outputStream);
         response.setStatus(200);
-    }
+    }*/
 }

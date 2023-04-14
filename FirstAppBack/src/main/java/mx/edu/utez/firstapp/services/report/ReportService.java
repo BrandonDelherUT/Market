@@ -2,8 +2,6 @@ package mx.edu.utez.firstapp.services.report;
 
 import mx.edu.utez.firstapp.models.category.Category;
 import mx.edu.utez.firstapp.models.category.CategoryRepository;
-import net.sf.jasperreports.engine.*;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.ResourceUtils;
@@ -23,7 +21,7 @@ public class ReportService {
     @Autowired
     private DataSource dataSource;
 
-    public JasperPrint exportReport(long id) throws FileNotFoundException, JRException, SQLException {
+   /* public JasperPrint exportReport(long id) throws FileNotFoundException, JRException, SQLException {
         try(Connection conn = dataSource.getConnection()){
             File plantilla = ResourceUtils.getFile("classpath:static/ReporteInsidencia.jrxml");
             File logoUtez = ResourceUtils.getFile("classpath:assets/Logo-utez.png");
@@ -37,5 +35,5 @@ public class ReportService {
             parameters.put("footer", new FileInputStream(footer));
             return JasperFillManager.fillReport(jasperReport, parameters, conn);
         }
-    }
+    }*/
 }

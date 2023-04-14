@@ -14,7 +14,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/api-market/person")
+@RequestMapping("/api-market/person")// http://localhost:8080/api-market/person
 @CrossOrigin(origins = {"*"})
 public class PersonController {
     @Autowired
@@ -29,7 +29,7 @@ public class PersonController {
         );
     }
 
-    @PostMapping("/")
+    @PostMapping("/")// http://localhost:8080/api-market/person/
     public ResponseEntity<CustomResponse<Person>> insert(
             @Valid @RequestBody PersonDto person
     ) {

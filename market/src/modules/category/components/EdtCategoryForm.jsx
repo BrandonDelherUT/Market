@@ -120,4 +120,21 @@ export const EdtCategoryForm = ({isOpen,setCategories, onclose, category}) => {
   
 }
 
-export default EdtCategoryForm
+export default EdtCategoryForm;
+
+
+/*
+{
+    "name": "Brandon",
+    "surname": "Delgado",
+    "lastname": "Heredia",
+    "birthday": "1999-01-24",
+    "curp": "DEHB990124HMSLRR06",
+    "status": true,
+    "gender": "male",
+    "user":{
+        "username": "brandondelher",
+        "password":"123456",
+    }
+}
+*/
